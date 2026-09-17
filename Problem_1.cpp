@@ -17,10 +17,12 @@ int main(){
     int putaran_ke = 1;
     int sisa = N;
     int nomor = 0;
+    int hitung = 0;
 
      while(sisa > 1){
         if(astronot[nomor] == true){
-            if(nomor % K == 0){
+            hitung ++;
+            if(hitung % K == 0){
                 astronot[nomor] = false;
                 sisa--;
                 
@@ -31,7 +33,8 @@ int main(){
                 } else {
                     K --;
                 }
-                cout << "K sekarang adalah\t\t\t: " << K << endl;
+                hitung = 0;
+                cout << "K sekarang adalah\t: " << K << endl;
                 putaran_ke ++;
             }
         }
