@@ -13,18 +13,16 @@ int main(){
         astronot[i]=true;
     }
     int putaran_ke = 1;
-    while(true){
-        if(i = K){
-            astronot[i] = false;
-            cout << "Putaran ke-" << putaran_ke << ",\nAstronot yang tereliminasi bernomor\t: " << i << endl;
-            if(i % 2 == 0){
-                K += 2;
-            } else {
-                K--;
-            }
-            cout << "K sekarang adalah\t\t\t: " << K << "\n\n";
-            putaran_ke ++;
+    if(i = K){
+        astronot[i] = false;
+        cout << "Putaran ke-" << putaran_ke << ",\nAstronot yang tereliminasi bernomor\t: " << i << endl;
+        if(i % 2 == 0){
+            K += 2;
+        } else {
+            K--;
         }
-        return 0;
+        cout << "K sekarang adalah\t\t\t: " << K << "\n\n";
+        putaran_ke ++;
     }
+    return 0;
 }
