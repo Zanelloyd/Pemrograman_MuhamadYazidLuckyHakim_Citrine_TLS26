@@ -14,7 +14,7 @@ int main(){
         astronot[i]=true;
     }
     
-    int putaran_ke = 1;
+    int urutan_eliminasi = 1;
     int sisa = N;
     int nomor = 0;
     int hitung = 0;
@@ -26,7 +26,7 @@ int main(){
                 astronot[nomor] = false;
                 sisa--;
                 
-                cout << "Putaran ke-" << putaran_ke << endl << ", astronot bernomor\t: " << nomor << endl;
+                cout << "Urutan ke-" << urutan_eliminasi << endl << ", astronot bernomor\t: " << nomor << endl;
                 
                 if(nomor % 2 == 0){
                     K += 2;
@@ -35,7 +35,7 @@ int main(){
                 }
                 hitung = 0;
                 cout << "K sekarang adalah\t: " << K << endl;
-                putaran_ke ++;
+                urutan_eliminasi ++;
             }
         }
         
