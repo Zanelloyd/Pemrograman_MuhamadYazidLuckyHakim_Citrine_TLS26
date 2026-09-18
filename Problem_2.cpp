@@ -20,8 +20,8 @@ int main() {
 
             cout << pesan[i] << "(" << nilai_saat_ini << ") + 0 = " << pesan_akhir[i] << "(" << nilai_saat_ini << ")\n";
             
-            cout << pesan[i];
             nilai_sebelum = nilai_saat_ini;
+            huruf_sebelum = pesan[i];
         } else {
             int nilai_baru = nilai_saat_ini + nilai_sebelum;
             int nilai_akhir = (nilai_baru - 1) % 26 + 1;
@@ -30,8 +30,6 @@ int main() {
             pesan_akhir[i] = huruf_baru;
 
             cout << pesan[i] << "(" << nilai_saat_ini << ") + " << huruf_sebelum << "(" << nilai_sebelum << ") = " << huruf_baru << "(" << nilai_akhir << ")\n";
-            
-            cout << huruf_baru;
             nilai_sebelum = nilai_saat_ini;
         }
     }
