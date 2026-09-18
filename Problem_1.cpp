@@ -3,11 +3,21 @@ using namespace std;
 
 int main(){
     int N, K;
-    cout << "Masukkan jumlah Astronot: ";
-    cin >> N;
-    cout << "Masukkan K: ";
-    cin >> K;
-    cout << "\n";
+   while(true){
+        cout << "Masukkan jumlah Astronot: ";
+        cin >> N;
+        cout << "Masukkan K: ";
+        cin >> K;
+        cout << "\n";
+
+        if(N <= 0 || K <= 0){
+            cout << "N atau K harus lebih dari 0!" << endl;
+        }else{
+            break;
+        }
+    }
+    
+    N++;
     bool astronot[N];
     
     for(int i = 0; i < N; i++){
@@ -15,26 +25,28 @@ int main(){
     }
     
     int urutan_eliminasi = 1;
-    int sisa = N;
-    int nomor = 0;
+    int nomor = 1;
     int hitung = 0;
 
-     while(sisa > 1){
+     while(urutan_eliminasi < N - 1){
         if(astronot[nomor] == true){
             hitung ++;
+            
             if(hitung % K == 0){
                 astronot[nomor] = false;
-                sisa--;
                 
-                cout << "Urutan ke-" << urutan_eliminasi << endl << ", astronot bernomor\t: " << nomor << endl;
+                cout << "Urutan ke-" << urutan_eliminasi << "\nAstronot yang tereliminasi adalah nomor\t: " << nomor << endl;
                 
                 if(nomor % 2 == 0){
                     K += 2;
                 } else {
                     K --;
                 }
+                if(K < 2){
+                    K = 2;
+                }
                 hitung = 0;
-                cout << "K sekarang adalah\t: " << K << endl;
+                cout << "K sekarang adalah\t\t\t: " << K << "\n\n" << endl;
                 urutan_eliminasi ++;
             }
         }
