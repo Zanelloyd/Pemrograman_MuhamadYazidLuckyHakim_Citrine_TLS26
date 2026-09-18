@@ -18,7 +18,7 @@ int main() {
         if (i == 0) {
             pesan_akhir[i] = pesan[i];
 
-            cout << pesan[i] << "(" << nilai_saat_ini << ") + 0 = " << pesan_akhir[i] << "(" << nilai_saat_ini << ")\n";
+            cout << pesan[i] << "(" << nilai_saat_ini << ") \t+ 0 \t\t= " << pesan_akhir[i] << "(" << nilai_saat_ini << ")\n";
             
             nilai_sebelum = nilai_saat_ini;
             huruf_sebelum = pesan[i];
@@ -29,7 +29,7 @@ int main() {
 
             pesan_akhir[i] = huruf_baru;
 
-            cout << pesan[i] << "(" << nilai_saat_ini << ") + " << huruf_sebelum << "(" << nilai_sebelum << ") = " << huruf_baru << "(" << nilai_akhir << ")\n";
+            cout << pesan[i] << "(" << nilai_saat_ini << ") \t+ " << huruf_sebelum << "(" << nilai_sebelum << ") \t= " << huruf_baru << "(" << nilai_akhir << ")\n";
             nilai_sebelum = nilai_saat_ini;
         }
     }
