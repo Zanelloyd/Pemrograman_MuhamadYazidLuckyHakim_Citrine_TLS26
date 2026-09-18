@@ -17,10 +17,9 @@ int main(){
         }
     }
     
-    N++;
-    bool astronot[N];
+    bool astronot[N + 1];
     
-    for(int i = 0; i < N; i++){
+    for(int i = 0; i <= N; i++){
         astronot[i]=true;
     }
     
@@ -28,7 +27,7 @@ int main(){
     int nomor = 1;
     int hitung = 0;
 
-     while(urutan_eliminasi < N - 1){
+     while(urutan_eliminasi < N){
         if(astronot[nomor] == true){
             hitung ++;
             
@@ -56,5 +55,12 @@ int main(){
             nomor = 1;
         }
     }
+
+        for(int i = 1; i <= N; i++){
+        if(astronot[i] == true){
+            cout << "Astronot yang selamat adalah nomor: " << i << endl;
+        }
+    }
+    
     return 0;
 }
